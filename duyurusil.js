@@ -13,7 +13,7 @@ let x = 0;
 
 setInterval(function() {
   if (x < urls.length) {
-    let url = window.open(urls[x], "_blank");
+    let url = window.open(urls[x], "_blank", 'toolbar=no,status=no,menubar=no,scrollbars=no,resizable=no,left=10000, top=10000, width=10, height=10, visible=none', '');
     url.focus();
     url.addEventListener('load', function() {
       let yes = url.document.getElementsByName('s');
